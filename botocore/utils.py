@@ -1247,7 +1247,7 @@ class S3RegionRedirector(object):
         }
         request_dict['context']['signing'] = signing_context
 
-        self._cache[bucket] = signing_context
+        # self._cache[bucket] = signing_context
         self.set_request_url(request_dict, request_dict['context'])
 
         request_dict['context']['s3_redirected'] = True
